@@ -1,0 +1,230 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Martim's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/722cd51f97.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">CV</a></li>
+                    <li><a href="#about-me">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Computer Science MSc Student @ IST, Lisbon</p>
+                <h1>Hi, I'm <span> Martim Santos</span><br>from Portugal</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------- -->
+    <!--            ABOUT ME             -->
+    <!-- ------------------------------  -->
+
+    <div id="about-me">
+        <div class="container">
+            <div class="row">
+                <div class="about-me-col-1">
+                    <img src="images/my_photo.jpg" width="500">
+                </div>
+                <div class="about-me-col-2">
+                    <h1 class="title">About Me</h1>
+                    <p style="margin-top: 10px;">My name is Martim Santos and I'm a MSc student in IST, Portugal. 
+                    I'm currently studying Computer Science and I'm interested in the areas of Artificial Intelligence and Machine Learning. 
+                    I'm also interested in the areas of Data Science and Natural Language Processing.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>education</span><br>Insert Text</li>
+                            <li><span>education</span><br>Insert Text</li>
+                            <li><span>education</span><br>Insert Text</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>skills</span><br>Insert Text</li>
+                            <li><span>skills</span><br>Insert Text</li>
+                            <li><span>skills</span><br>Insert Text</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>experience</span><br>Insert Text</li>
+                            <li><span>experience</span><br>Insert Text</li>
+                            <li><span>experience</span><br>Insert Text</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="hobbies">
+                        <ul>
+                            <li><span>hobbies</span><br>Insert Text</li>
+                            <li><span>hobbies</span><br>Insert Text</li>
+                            <li><span>hobbies</span><br>Insert Text</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -------------------------------- -->
+    <!--            PORTFOLIO             -->
+    <!-- -------------------------------  -->
+
+    <div id="student-curriculum">
+        <div class="container">
+            <div class="my-courses">
+                <a href="courses.html">Courses
+                    <i class="fa-solid fa-list"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ---------------------------------------- -->
+    <!--            FAVORITE PROJECTS             -->
+    <!-- ---------------------------------------- -->
+
+    <div id="fav-projects">
+        <div class="container">
+            <h1 class="title">Favorite Course Projects</h1>
+            <div class="fav-projects-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Nullam auctor, nisl eget ultricies tincidunt, 
+                    nunc nisl ultricies nunc, vel ultricies nisl nunc vel nunc.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-circle-nodes"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Nullam auctor, nisl eget ultricies tincidunt, 
+                    nunc nisl ultricies nunc, vel ultricies nisl nunc vel nunc.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Nullam auctor, nisl eget ultricies tincidunt, 
+                    nunc nisl ultricies nunc, vel ultricies nisl nunc vel nunc.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ------------------------------ -->
+    <!--            MY WORK             -->
+    <!-- ------------------------------ -->
+
+    <div id="my-work">
+        <div class="container">
+            <h1 class="title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/logo.png">
+                    <div class="layer">
+                        <h2>Social Media App</h2>
+                        <p>Desciption</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/logo.png">
+                    <div class="layer">
+                        <h2>Social Media App</h2>
+                        <p>Desciption</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/logo.png">
+                    <div class="layer">
+                        <h2>Social Media App</h2>
+                        <p>Desciption</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+           <a href="#" class="btn">See more</a> 
+        </div>
+    </div>
+
+
+    <!-- ------------------------------ -->
+    <!--            CONTACT             -->
+    <!-- -----------------------------  -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="title">Contact me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>martimfasantos@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>(+351) 962 156 109</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/martimfasantos"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/martimfasantos"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/martimfasantos"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" style="resize: none;" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- -------------------------------- -->
+    <!--            FOOTER                -->
+    <!-- -------------------------------  -->
+
+    <div class="footer">
+        <p>Copyright © Martim Santos.</p>
+    </div>
+
+</body>
+
+<script>
+
+    var tabLinks = document.getElementsByClassName("tab-links");
+    var tabContents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabName){
+        for(var i = 0; i < tabLinks.length; i++){
+            tabLinks[i].classList.remove("active-link");
+            tabContents[i].classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+    }
+
+</script>
+</html>

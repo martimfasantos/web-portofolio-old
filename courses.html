@@ -1,0 +1,196 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Martim's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/722cd51f97.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="return">
+        <a href='index.html#student-curriculum'>
+            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-house"></i>
+        </a>
+    </div>
+    <div class="course-title active-course" onclick="opentab('bsc')">Bologna Degree in Computer Science and Engineering</div>
+    <div class="course-title" onclick="opentab('msc')">Bologna Degree in Computer Science and Engineering</div>
+    <div class="course-list active-list" id="bsc">
+        <ul>
+            <div class="course-section">Computer Science</div>
+            <li>
+                <span class="course">Foundations of Programming
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade18">18</span>
+            </li>
+            <li>
+                <span class="course">Introduction to Computer Architecture
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade16">16</span>
+            </li>
+            <li>
+                <span class="course">Introduction to Algorithms and Data Structures
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade18">18</span>
+            </li>
+            <li>
+                <span class="course">Logic for Programming
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade19">19</span>
+            </li>
+            <li>
+                <span class="course">Object-Oriented Programming
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade19">19</span>
+            </li>
+            <li>
+                <span class="course">Operating Systems
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade17">17</span>
+            </li>
+            <li>
+                <span class="course">Analysis and Synthesis of Algorithms
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade16">16</span>
+            </li>
+            <li>
+                <span class="course">Human-Computer Interaction
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade19">19</span>
+            </li>
+
+            <!-- ----------------------------------- -->
+            <!--        Engeneering Sciences         -->
+            <!-- ----------------------------------- -->
+
+            <div class="course-section">Engeneering Sciences</div>
+            <li>
+                <span class="course">Differential and Integral Calculus I
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade17">17</span>
+            </li>
+            <li>
+                <span class="course">Linear Algebra
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade17">17</span>
+            </li>
+            <li>
+                <span class="course">Differential and Integral Calculus II
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade17">17</span>
+            </li>
+            <li>
+                <span class="course">Discrete Mathematics
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade18">18</span>
+            </li>
+            <li>
+                <span class="course">Complex Analysis and Differential Equations
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade16">16</span>
+            </li>
+            <li>
+                <span class="course">Mechanics and Waves
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade17">17</span>
+            </li>
+            <li>
+                <span class="course">Electromagnetism and Optics
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade16">16</span>
+            </li>
+            <li>
+                <span class="course">Probabilistic and Statistics
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade17">17</span>
+            </li>
+            <li>
+                <span class="course">Theory of Computation
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade16">16</span>
+            </li>
+
+            <!-- -------------------------- -->
+            <!--        Soft Skills         -->
+            <!-- -------------------------- -->
+
+            <div class="course-section">Soft Skills</div>
+            <li>
+                <span class="course">Introduction to Information Systems and Computer Engineering
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade19">19</span>
+            </li>
+            <li>
+                <span class="course">Management
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade16">16</span>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <!-- ------------------------- -->
+    <!--        MSC DEGREE         -->
+    <!-- ------------------------- -->
+
+    <div class="course-list" id="msc">
+        <ul>
+            <div class="course-section">Computer Science</div>
+            <li>
+                <span class="course">Foundations of Programming
+                    <a href='#'><i class="fa-brands fa-github"></i></a>
+                </span>
+                <span class="grade18">18</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- -------------------------------- -->
+    <!--            FOOTER                -->
+    <!-- -------------------------------  -->
+
+    <div class="footer">
+        <p>Copyright © Martim Santos.</p>
+    </div>
+
+</body>
+
+<script>
+    var courseTitles = document.getElementsByClassName("course-title");
+    var courseLists = document.getElementsByClassName("course-list");
+
+    function opentab(tabName){
+        for(var i = 0; i < courseTitles.length; i++){
+            courseTitles[i].classList.remove("active-course");
+            courseLists[i].classList.remove("active-list");
+        }
+        event.currentTarget.classList.add("active-course");
+        document.getElementById(tabName).classList.add("active-list");
+    }
+</script>
+
+</html>
