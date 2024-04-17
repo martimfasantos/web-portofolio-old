@@ -653,6 +653,14 @@ nav ul li a{
     /* float: right; */
     margin-left: 25px;
 }
+.course-item a.grading-system{
+    text-decoration: none;
+    position: relative;
+    color: #9f9f9f;
+    font-size: 12px;
+    margin-top: 8px;
+    float: right;
+}
 .course-list span.grade16{
     background: #97b74c;
     display: inline-block;
