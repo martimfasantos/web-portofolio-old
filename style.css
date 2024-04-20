@@ -271,6 +271,29 @@ nav ul li a{
     font-size: 17px;
     text-align: justify;
 }
+.about-me-col-2 p a.prof{
+    color: #8e8e8e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.about-me-col-2 p a.prof:hover{
+    color: #b99e00;
+    text-decoration: underline;
+}
+.about-me-col-2 p a.company{
+    color: #4a68e1;
+    text-decoration: none; 
+}
+.about-me-col-2 p a.company:hover{
+    text-decoration: underline;
+}
+.about-me-col-2 p a img{
+    height: 20px; 
+    margin-bottom: -4px;
+    margin-left: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+}
 #hobbies p a{
     color: #707070;
     text-decoration: none;
