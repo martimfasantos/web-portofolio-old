@@ -613,103 +613,75 @@ nav ul li a{
 }
 .tab-titles{
     display: flex;
-    margin: 25px 0;         
-}
-/* TODO  https://uiverse.io/Yaya12085/wonderful-owl-52 */
-/* .radio-input {
-    display: flex;
-    flex-direction: row;
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-  }
-  
-.radio-input input[type="radio"] {
-display: none;
+    margin: 35px 0 20px;
 }
 
-.radio-input label {
-display: flex;
-align-items: center;
-padding: 10px;
-border: 1px solid #ccc;
-background-color: #212121;
-border-radius: 5px;
-margin-right: 12px;
-cursor: pointer;
-position: relative;
-transition: all 0.3s ease-in-out;
-}
-
-.radio-input label:before {
-content: "";
-display: block;
-position: absolute;
-top: 50%;
-left: 0;
-transform: translate(-50%, -50%);
-width: 10px;
-height: 10px;
-border-radius: 50%;
-background-color: #fff;
-border: 2px solid #ccc;
-transition: all 0.3s ease-in-out;
-}
-
-.radio-input input[type="radio"]:checked + label:before {
-background-color: green;
-top: 0;
-}
-
-.radio-input input[type="radio"]:checked + label {
-background-color: royalblue;
-color: #fff;
-border-color: rgb(129, 235, 129);
-animation: radio-translate 0.5s ease-in-out;
-}
-
-@keyframes radio-translate {
-0% {
-    transform: translateX(0);
-}
-
-50% {
-    transform: translateY(-10px);
-}
-
-100% {
-    transform: translateX(0);
-}
-} */
 .tab-links{
-    margin-top: 10px;
-    margin-right: 50px;
-    color: #ffffff;
-    font-size: 19px;
-    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+    border: 1px solid #dddddd;
+    background-color: #222222;
+    border-radius: 7px;
+    margin-right: 35px;
     cursor: pointer;
     position: relative;
-    transition: transform 0.3s;
+    transition: all 0.3s ease-in-out;
+}
+.tab-links::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #efefef;
+    transition: all 0.3s ease-in-out;
 }
 .tab-links:hover {
     transform: scale(1.1);
+    background-color: #3c3c3c;
 }
 .tab-links::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #FFD700;
+    background: #c7a900;
     position: absolute;
     left: 0;
     bottom: -5px;
 }
-.tab-links:hover::after{
-    width: 100%;
-    transition: 0.5s;
+
+.tab-links.active-link::before {
+    top: 0;
+    border-color: #ffd900;
+    background-color: #c7a900;
+	box-shadow: 0px 0px 10px 2px #c7a900;
 }
 
-.tab-links.active-link::after{
-    width: 100%;
+.tab-links.active-link{
+    color: #c7a900;
+    border-color: #c7a900;
+    animation: radio-translate 0.5s ease-in-out;
+}
+
+@keyframes radio-translate {
+    0% {
+        transform: translateX(0);
+    }
+    
+    50% {
+        transform: translateY(-10px);
+    }
+    
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .tab-contents{
@@ -730,6 +702,11 @@ animation: radio-translate 0.5s ease-in-out;
 .tab-contents ul li p.description, 
 .tab-contents ul li p.extras{
     font-size: 17px;
+}
+.tab-contents ul li p.description a#TUM{
+    font-weight: bold;
+    text-decoration: none;
+    color: #165190
 }
 .tab-contents ul li p.extras{
     font-size: 17px;
@@ -803,7 +780,7 @@ animation: radio-translate 0.5s ease-in-out;
 	padding: 10px 5px;
 }
 .timeline ul li{
-	padding: 20px 20px;
+	padding: 18px 20px;
 	position: relative;
 	cursor: pointer;
 	transition: .5s;
@@ -821,7 +798,17 @@ animation: radio-translate 0.5s ease-in-out;
 	font-size: 17px;
 	padding-top: 8px;
 }
-.timeline ul li .content p{
+
+.timeline ul li .content h3 a{
+    text-decoration: none;
+    color: #c7a900;
+}
+
+.timeline ul li .content h3 a:hover{
+    color: #9d8600;
+}
+
+.timeline ul li .content p a{
 	padding: 5px 0px 15px 0px;
 	font-size: 14px;
 }
@@ -849,7 +836,7 @@ animation: radio-translate 0.5s ease-in-out;
 /* ------------------------------ */
 
 #student-curriculum{
-    margin-top: 120px;
+    margin-top: 135px;
     padding: 30px 0;
 }
 
@@ -879,10 +866,10 @@ animation: radio-translate 0.5s ease-in-out;
     width: 20%;
     min-width: 278px;
     max-width: 340px;
-    padding: 80px 20px 15px;
+    padding: 50px 20px 22px;
     position: relative;
     vertical-align: top;
-    margin: 12px 18px;
+    margin: 12px 20px;
     min-height: 28vh;
     background: #1a1a1a;
     border: 1px solid #313131;
@@ -894,7 +881,7 @@ animation: radio-translate 0.5s ease-in-out;
     margin-top: 2px;
     position: absolute;
     opacity: 0.2;
-    top: 45px;
+    top: 25px;
     right: 0px;
     transition: all 0.3s ease-in-out;
 }
@@ -905,12 +892,17 @@ animation: radio-translate 0.5s ease-in-out;
     margin-right: 20px;
     margin-bottom: 12px;
 }
+.tiles-wrap li h4 {
+    font-size: 16px;
+    margin-top: -10px;
+    color: #404040;
+}
 
 .tiles-wrap li p {
     font-size: 16px;
     line-height: 20px;
     color: #b7b7b7;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .tiles-wrap li a {
@@ -1000,6 +992,17 @@ animation: radio-translate 0.5s ease-in-out;
     background: #FC354C;
     background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);
     background: linear-gradient(to right, #0ABFBC, #FC354C);
+}
+.tiles-wrap li:nth-child(5):before {
+    background: #FF512F;
+    background: -webkit-linear-gradient(to right, #DD2476, #FF512F);
+    background: linear-gradient(to right, #DD2476, #FF512F);
+}
+
+.tiles-wrap li:nth-child(6):before {
+    background: #24C6DC;
+    background: -webkit-linear-gradient(to right, #858587, #a3358f);
+    background: linear-gradient(to right, #858587, #a3358f);
 }
 
 .btn.flying.see-all-courses{
