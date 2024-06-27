@@ -33,7 +33,7 @@ body{
 
 .container{
     padding: 10px 10%;
-    max-width: 1300px;
+    max-width: 1400px;
     margin: auto;
     padding: 0 15px;
 }
@@ -43,7 +43,6 @@ body{
     margin: auto;
     padding: 0 5px;
 }
-
 
 nav {
     width: 100%;
@@ -130,11 +129,14 @@ nav ul li a{
     filter: drop-shadow(0 0 23px var(--animation-color))
 }
 
-.header-text {
+.header-info {
     position: relative;
     float: right;
-    right: 45px;
+    right: 5%;
     margin-top: 12%;
+}
+
+.header-text {
     font-size: 25px;
     overflow: hidden;
 }
@@ -145,7 +147,6 @@ nav ul li a{
     animation-delay: 0.4s;
 }
 .header-text h1 {
-    margin-top: 20px;
     font-size: 80px;
 }
 .header-text h1 span {
@@ -154,6 +155,316 @@ nav ul li a{
     -webkit-background-clip: text;
     color: transparent;
 }
+
+.header-socials-container {
+    position: relative;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-right: 10%;
+}
+
+/* DEFAULT STRUCTURE */
+
+.tooltip-container {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 17px;
+    border-radius: 10px;
+    margin-right: 30px;
+}
+  
+.tooltip {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    border-radius: 15px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.tooltip-container:hover .tooltip {
+    top: -150px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.tooltip .profile {
+    background: #2a2b2f;
+    border-radius: 10px 15px;
+    padding: 10px;
+}
+  
+.profile .user {
+    display: flex;
+    gap: 10px;
+}
+
+.profile .user .img img{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile .user .details {
+    display: flex;
+    margin-top: 5px;
+    flex-direction: column;
+    gap: 0;
+    color: #fff;
+}
+
+.profile .user .details .name {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.profile .user .details .username {
+    font-weight: 500;
+    color: #fafafa;
+}
+.profile .about {
+    color: #ccc;
+    padding-top: 5px;
+}
+
+.socials-icon {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    position: relative;
+}
+
+.socials-icon .icon-layer {
+    width: 55px;
+    height: 55px;
+    transition: transform 0.3s;
+}
+
+.socials-icon .icon-layer span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+
+.icon-layer span.fab,
+.icon-layer span.fa-brands{
+    display: flex;
+    font-size: 35px;
+    line-height: 64px;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+}
+
+.socials-icon:hover .icon-layer span:nth-child(1) {
+    opacity: 0.2;
+}
+.socials-icon:hover .icon-layer span:nth-child(2) {
+    opacity: 0.4;
+    transform: translate(5px, -5px);
+}
+.socials-icon:hover .icon-layer span:nth-child(3) {
+    opacity: 0.6;
+    transform: translate(10px, -10px);
+}
+.socials-icon:hover .icon-layer span:nth-child(4) {
+    opacity: 0.8;
+    transform: translate(15px, -15px);
+}
+.socials-icon:hover .icon-layer span:nth-child(5) {
+    opacity: 1;
+    transform: translate(20px, -20px);
+}
+
+.socials-icon .text {
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    opacity: 0;
+    font-weight: 500;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+.socials-icon:hover .text {
+    bottom: -25px;
+    opacity: 1;
+}
+
+
+/* ---------------------- */
+/* LINKEDIN CUSTOMIZATION */
+/* ---------------------- */
+
+/* customization */
+.tooltip .profile#linkedin {
+    border: 1px solid rgba(11, 63, 95, 1);
+}
+
+/* customization */
+.profile#linkedin .user .img img {
+    border: 1px solid #1da1f2;
+}
+
+/* customization */
+.profile#linkedin .user .details .name {
+    color: #1da1f2;
+}
+
+/* customization */
+.linkedin-button {
+    color: #1da1f2;
+    border-color: #1da1f2;
+}
+
+.linkedin-button:hover .socials-icon#linkedin .icon-layer {
+    transform: rotate(-35deg) skew(20deg);
+}
+
+/* customization */
+.socials-icon#linkedin .icon-layer span,
+.socials-icon#linkedin .text {
+    color: #1da1f2;
+    border-color: #1da1f2;
+}
+
+/* customization */
+.socials-icon#linkedin .icon-layer span.fab {
+    fill: #1da1f2;
+}
+
+/* customization */
+.socials-icon#linkedin:hover .icon-layer span {
+    box-shadow: -1px 1px 3px #1da1f2;
+}
+
+
+/* -------------------- */
+/* GITHUB CUSTOMIZATION */
+/* -------------------- */
+
+/* customization */
+.tooltip .profile#github {
+    border: 1px solid rgba(36,41,46, 1);
+}
+
+/* customization */
+.profile#github .user .img img {
+    border: 1px solid #cfcfcf;
+}
+
+/* customization */
+.profile#github .user .details .name {
+    color: #cfcfcf;
+}
+
+/* customization */
+.github-button {
+    color: #eeeeee;
+    border-color: #eeeeee;
+}
+
+.github-button:hover .socials-icon#github .icon-layer {
+    transform: rotate(-35deg) skew(20deg);
+}
+
+/* customization */
+.socials-icon#github .icon-layer span,
+.socials-icon#github .text {
+    color: #eeeeee;
+    border-color: #eeeeee;
+}
+
+/* customization */
+.socials-icon#github .icon-layer span.fa-brands {
+    fill: #eeeeee;
+}
+
+/* customization */
+.socials-icon#github:hover .icon-layer span {
+    box-shadow: -1px 1px 3px #eeeeee;
+}
+
+
+/* ----------------------- */
+/* INSTAGRAM CUSTOMIZATION */
+/* ----------------------- */
+
+/* customization */
+.tooltip .profile#instagram {
+    border: 1px solid #52382f
+}
+
+/* customization */
+.profile#instagram .user .img img {
+    border: 1px solid #e6683c;
+}
+
+/* customization */
+.profile#instagram .user .details .name {
+    color: #e6683c;
+}
+
+/* customization */
+.instagram-button {
+    color: #e6683c;
+    border-color: #e6683c;
+}
+
+.instagram-button:hover .socials-icon#instagram .icon-layer {
+    transform: rotate(-35deg) skew(20deg);
+}
+
+/* customization */
+.socials-icon#instagram .icon-layer span,
+.socials-icon#instagram .text {
+    color: #e6683c;
+    border-color: #e6683c;
+}
+
+.instagramSVG {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+    );
+    background: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+  
 
 .home-imghover{
     position: absolute;
@@ -247,7 +558,7 @@ nav ul li a{
 /* ------------------------------ */
 
 #about-me{
-    padding: 30px 0;
+    padding: 40px 0;
     color: #bababa;
 }
 
@@ -259,35 +570,27 @@ nav ul li a{
 }
 
 .about-me-col-1{
-    flex-basis: 30%;
-}
-.about-me-col-1 img{
-    width: 100%;
-    border-radius: 15px;
-}
-
-.about-me-col-2{
-    flex-basis: 63%;
+    flex-basis: 55%;
     font-size: 17px;
     text-align: justify;
 }
-.about-me-col-2 p a.prof{
+.about-me-col-1 p a.prof{
     color: #8e8e8e;
     text-decoration: none;
     transition: color 0.3s ease;
 }
-.about-me-col-2 p a.prof:hover{
+.about-me-col-1 p a.prof:hover{
     color: #b99e00;
     text-decoration: underline;
 }
-.about-me-col-2 p a.company{
+.about-me-col-1 p a.company{
     color: #4a68e1;
     text-decoration: none; 
 }
-.about-me-col-2 p a.company:hover{
+.about-me-col-1 p a.company:hover{
     text-decoration: underline;
 }
-.about-me-col-2 p a img{
+.about-me-col-1 p a img{
     height: 20px; 
     margin-bottom: -4px;
     margin-left: 4px;
@@ -312,6 +615,72 @@ nav ul li a{
     display: flex;
     margin: 25px 0;         
 }
+/* TODO  https://uiverse.io/Yaya12085/wonderful-owl-52 */
+/* .radio-input {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+  }
+  
+.radio-input input[type="radio"] {
+display: none;
+}
+
+.radio-input label {
+display: flex;
+align-items: center;
+padding: 10px;
+border: 1px solid #ccc;
+background-color: #212121;
+border-radius: 5px;
+margin-right: 12px;
+cursor: pointer;
+position: relative;
+transition: all 0.3s ease-in-out;
+}
+
+.radio-input label:before {
+content: "";
+display: block;
+position: absolute;
+top: 50%;
+left: 0;
+transform: translate(-50%, -50%);
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #fff;
+border: 2px solid #ccc;
+transition: all 0.3s ease-in-out;
+}
+
+.radio-input input[type="radio"]:checked + label:before {
+background-color: green;
+top: 0;
+}
+
+.radio-input input[type="radio"]:checked + label {
+background-color: royalblue;
+color: #fff;
+border-color: rgb(129, 235, 129);
+animation: radio-translate 0.5s ease-in-out;
+}
+
+@keyframes radio-translate {
+0% {
+    transform: translateX(0);
+}
+
+50% {
+    transform: translateY(-10px);
+}
+
+100% {
+    transform: translateX(0);
+}
+} */
 .tab-links{
     margin-top: 10px;
     margin-right: 50px;
@@ -340,7 +709,7 @@ nav ul li a{
 }
 
 .tab-links.active-link::after{
-    width: 50%;
+    width: 100%;
 }
 
 .tab-contents{
@@ -353,7 +722,7 @@ nav ul li a{
     list-style: none;
     margin: 0 0 12px;
 }
-.tab-contents ul li h1{
+.tab-contents ul h1{
     color: #c7a900;
     font-weight: normal;
     font-size: 18px;
@@ -377,6 +746,20 @@ nav ul li a{
     color: #c7a900;
 }
 
+.tab-contents .diploma-list {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.diploma-list .diploma-item {
+    width: 48%;
+    margin-bottom: 12px;
+}
+
 .tab-contents .diploma-file {
     color: #aaa9a9; 
     text-decoration: none;
@@ -390,13 +773,83 @@ nav ul li a{
     transform: scale(1.2);
 }
 
+.about-me-col-2{
+    flex-basis: 38%;
+}
+.about-me-col-2 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.timeline-title{
+    font-size: 26px;
+    font-weight: 700;
+    color: #bababa;
+    margin-top: 20px;
+}
+
+.timeline{
+    background-color: #072736;
+	color: #fff;
+	padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+}
+
+.timeline ul{
+	list-style-type: none;
+	border-left: 2px solid #094a68;
+	padding: 10px 5px;
+}
+.timeline ul li{
+	padding: 20px 20px;
+	position: relative;
+	cursor: pointer;
+	transition: .5s;
+}
+.timeline ul li span{
+	display: inline-block;
+	background-color: #1685b8;
+	border-radius: 20px;
+	padding: 2px 8px;
+	font-size: 15px;
+	text-align: center;
+}
+.timeline ul li .content h3{
+	color: #c7a900;;
+	font-size: 17px;
+	padding-top: 8px;
+}
+.timeline ul li .content p{
+	padding: 5px 0px 15px 0px;
+	font-size: 14px;
+}
+.timeline ul li:before{
+	position: absolute;
+	content: '';
+	width: 10px;
+	height: 10px;
+	background-color: #e4e4e4;
+	border-radius: 50%;
+	left: -11px;
+	top: 28px;
+	transition: .5s;
+}
+.timeline ul li:hover{
+	background-color: #071f2a;
+}
+.timeline ul li:hover:before{
+	background-color: #0F0;
+	box-shadow: 0px 0px 10px 2px #0F0;
+}
 
 /* ------------------------------ */
 /*            COURSES             */
 /* ------------------------------ */
 
 #student-curriculum{
-    margin-top: 70px;
+    margin-top: 120px;
     padding: 30px 0;
 }
 
