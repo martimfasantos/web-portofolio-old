@@ -1031,11 +1031,11 @@ nav ul li a{
 }
 
 .btn.flying.see-all-courses:hover i {
-    transform: translateX(2.2em) scale(1.15);
+    transform: translateX(3.8em) scale(1.15);
 }
 
 .btn.flying.see-all-courses:hover span {
-    transform: translateX(6em);
+    transform: translateX(11em);
 }
 
 
