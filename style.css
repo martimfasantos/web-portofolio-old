@@ -590,6 +590,15 @@ nav ul li a{
 .about-me-col-1 p a.company:hover{
     text-decoration: underline;
 }
+.about-me-col-1 p a.lab{
+    color: #d2d2d2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.about-me-col-1 p a.lab:hover{
+    color: #b99e00;
+    text-decoration: underline;
+}
 .about-me-col-1 p a img{
     height: 20px; 
     margin-bottom: -4px;
